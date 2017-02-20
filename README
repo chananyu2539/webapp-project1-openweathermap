@@ -1,8 +1,30 @@
-Chananyu Pumpradub 5680963
+Member:
+    Chananyu Pumpradub 5680963
 
-Veeravit H
+    Veeravit Harutaipree 5680374    
 
-Weather Report from every places around the world
+Project: Google Weather Maps
+
+overview:
+    we want to convey the current weather and temperature from around the world to user in real-time-process
+
+APIs:
+    OpenWeather:
+        - Request for data from openweather with "JSON" as returning format object
+   
+    Google Maps:
+        - googlemap's places: using in search box for user to search in google map
+        - get bounds: get boundary of the searched region
+        - infowindow: show temp. and weather of target area
+        - getBound + NorthEast + SouthWest: get the region of the current map view, in latitude and longtitude
+        - geoJSON: after converting the JSON object from openweather to geoJSON, used this for marking weather on google map 
+
+Known bugs:
+    Fixed:
+        - Inconsistency in openweather api: the format of JSON is not consistent. (sometimes it "lat,lng", sometimes it "Lat,Lng")
+    Not fixed:
+        - When you zoom in too much, the return type is [] and cause error. I just prevent it from complaining by just try-catch.
+        - Sometimes, it skipped the city in the region, resulted in no report on that city
 
 
 
